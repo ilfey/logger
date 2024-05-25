@@ -33,7 +33,7 @@ func LevelFormatter(level Level, format string) string {
 
 func TextFormatter(level Level, format string, args ...interface{}) string {
 	return fmt.Sprintf(
-		LevelFormatter(level, format),
+		LevelFormatter(level, format)+"\n",
 		args...,
 	)
 }
